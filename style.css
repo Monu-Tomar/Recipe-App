@@ -66,7 +66,7 @@ body{ font:16px/1.3 var(--ff);}
 .wrap-1 nav li { margin: 10px 25px; color: #ffd7ad;}
 .wrap-1 nav ul{justify-content: center;align-items: center; background-color: #4a1831;}
 
-.banner { background: url(/images/banner.webp) no-repeat center/cover;
+.banner { background: url(images/banner.webp) no-repeat center/cover;
     color: #ffd7ad;
    }
 .logo { margin: 20px;}
@@ -110,7 +110,7 @@ body{ font:16px/1.3 var(--ff);}
 .wrap-5 img{ margin-top: 50px;}
 
 
-.wrap-6{background: url(/images/m-food.png) ;}
+.wrap-6{background: url(images/m-food.png) ;}
 .logo-2{text-align: center; justify-content: center;
     background: rgba(17, 12, 20, 0.6); padding: 100px;}
 
@@ -176,7 +176,7 @@ body{ font:16px/1.3 var(--ff);}
     .section p{font-size: 1rem;}
     .section h2{font-size: 1.5rem;}
     .section{margin: 50px;}
-
+    .ftr{padding: 15px;}
 }
 
 @media screen and (max-width:460px) {
@@ -198,7 +198,6 @@ body{ font:16px/1.3 var(--ff);}
     .about-5 img {margin: 0px auto 25px 85px;}
     .about-1{padding: 0 125px 0 100px; margin: 50px 0;}
     .about-4 img {margin: auto auto auto 90px;}
-
 }
 
 @media screen and (max-width:400px){
@@ -212,7 +211,7 @@ body{ font:16px/1.3 var(--ff);}
     .offer{padding: 30px;}
     .offer button{ margin-left: -30px; width: 77px; margin-top: 30px;}
     .offer form>input{ border: none; border-radius: 20px; padding: 10px; width: 25%;}  
-    .footer{padding: 30px;}
+    .footer{padding: 20px;}
     .about{margin: 25px auto auto 60px;}
 }
 
