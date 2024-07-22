@@ -80,7 +80,7 @@ body{ font:16px/1.3 var(--ff);}
 .wrap-1 nav li { margin: 10px 25px; color: #ffd7ad;}
 .wrap-1 nav ul{justify-content: center;align-items: center; background-color: #4a1831;}
 
-.banner { background: url(images/banner-1.png) no-repeat center/cover;
+.banner { background: url(images/banner.webp) no-repeat center/cover;
     color: #ffd7ad;
    }
 .logo { margin: 20px;}
