@@ -33,7 +33,10 @@ label{ display: inline-block;}
 }
 
 html{ font-size: 15px;     scroll-behavior: smooth; scroll-padding-top: 80px;
-    --ff: roboto, sans-serif;  }
+    --ff: roboto, sans-serif;
+    --green:#95e1d3;
+    --grad:linear-gradient(#f38181e6, #fce38ae6);
+  }
 
 body{ font:16px/1.3 var(--ff);}
 
@@ -60,13 +63,24 @@ body{ font:16px/1.3 var(--ff);}
 .justify-center{ justify-content: center;}
 .align-items{ align-items: center;}
 
+::-webkit-scrollbar {
+    width: 5px;
+    background: #f5f5f5;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #956cbb;
+  /* background: var(--green); */
+  border-radius: 5px;
+}
+
   /* Layout*/
 
 .wrap-1 nav a { font-size: 16px; display: block;}
 .wrap-1 nav li { margin: 10px 25px; color: #ffd7ad;}
 .wrap-1 nav ul{justify-content: center;align-items: center; background-color: #4a1831;}
 
-.banner { background: url(images/banner.webp) no-repeat center/cover;
+.banner { background: url(images/banner-1.png) no-repeat center/cover;
     color: #ffd7ad;
    }
 .logo { margin: 20px;}
@@ -81,12 +95,12 @@ body{ font:16px/1.3 var(--ff);}
 .section{margin: 80px;}
 .section{font-size: 2rem;}
 .full{ background: #ffd7ad;}
-.btn{margin-top: 1rem; width: 180px; padding: 5px; font-weight: 400;
+.btn{margin-top: 1rem; width: 150px; padding: 5px; font-weight: 400;
     font-size: 16px; border-radius: 15px; color: #fff; background: #4a1831; border: none;}
 
 .wrap-4{ background: #ffd7ad; color: #4a1831;}
 .about-4{margin: 60px 0 0 10px;}
-.about{margin: 240px 0px; padding-left: 12px;}
+.about { margin: 125px 0px 0 0; padding-left: 30px;}
 .about h2 { font-size: 4rem;}
 .about p { font-size: 2rem;}
 .about button {margin-top: 1rem; width: 180px; padding: 5px; font-weight: 400;
@@ -99,7 +113,7 @@ body{ font:16px/1.3 var(--ff);}
  .wrap-4 .red{color: #e63956;}
 .wrap-4 .blue{color: #6cc5ac;}
 .col-4 ,.col-8{ padding: 0;}
-.image img{ width: 100%; height: auto; margin: auto auto;}
+.image img{ width: 95%; height: auto; margin: auto auto;}
 .image{ margin: 0 20px auto 150px;}
 
 .wrap-5{ background: #4a1831; color: #ffd7ad;}
@@ -127,6 +141,7 @@ body{ font:16px/1.3 var(--ff);}
 
 .footer{ background: #4a1831; color: #ffd7ad; padding: 50px;}
 .icon{ font-size: 30px; margin-top: 15px; border-radius: 50%;}
+.col-5{padding: 10px;}
 .footer-text{font-size: 15px;}
 .footer-text h3{ margin-bottom: 15px;}
 .fa-brands{border-radius: 50%;}
@@ -141,6 +156,8 @@ body{ font:16px/1.3 var(--ff);}
     .absolute { position: absolute; top: 0px; left: 90px;}
     .image{margin: 20px 0 0 auto;}
     .about-1{margin: 185px 0px; padding: 0 0 0 30px;}
+    .about-4 img{width: 95%; height: auto;}
+
 }
 
 @media screen and (min-width:980px) { 
@@ -149,10 +166,13 @@ body{ font:16px/1.3 var(--ff);}
 
 @media screen and (max-width:980px) {
     .col-t-12{ flex-basis: 100%; max-width: 100%;}
+    .col-m-12{ flex-basis: 100%; max-width: 100%;}
     .absolute { position: absolute; top: 5px; left: 20px; font-size: 40px;}
-    .absolute span{ font-size: 45px;}
-    .about{margin: 80px 150px 0 150px;}
-    .about-4 img{width: 100%; height: auto; }
+    .about {
+        margin: 80px 0px 0 0;
+        padding-right: 100px;
+    }
+    .about-4 img{width: 90%; height: auto; margin-left: 175px; }
     .about-4 .image img {margin: auto auto auto 150px;}
     .wrap-4 span{font-size: 4rem; font-weight: bold;}
     .about h2 { font-size: 3rem;}
@@ -162,29 +182,42 @@ body{ font:16px/1.3 var(--ff);}
     .col-t-6{ flex-basis: 50%; max-width: 50%;}
     .col-t-12{ flex-basis: 100%; max-width: 100%;}
     .about-5 img{width: 100%; height: auto; margin: 110px auto auto 0;}
+    .image img {
+        width: 87%;
+        height: auto;
+        margin: auto auto;
+        margin-left: 215px;
+    }
 }
 
 @media screen and (max-width:769px) {
     html { font-size: 13px;}
     .col-t-6{ flex-basis: 50%; max-width: 50%;}
     .col-t-12{ flex-basis: 100%; max-width: 100%;}
+    .col-m-12{ flex-basis: 100%; max-width: 100%;}
     .about-4{margin: 60px 0 0 auto;}
     .about-4 img {margin: auto auto auto 150px;}
-    .image img{ width: 155%; height: auto;}
+    .image img{ width: 135%; height: auto; margin-left: 0;}
     .about h2, .about-1 h1 { font-size: 2rem;}
-    .about-1 p, .about p { font-size: 1rem;}
+    .about-1 p, .about p { font-size: 1.3rem;}
+    .about{margin: 70px 0px 0 0px; padding: 0 30px;}
     .image{ margin: 0 20px auto 150px;}
     .wrap-4 span{font-size: 3rem; font-weight: bold;}
     .about button, .about-1 button {margin-top: 0.8rem; width: 150px; padding: 5px; font-weight: 300;font-size: 12px;}
-    .section p{font-size: 1rem;}
-    .section h2{font-size: 1.5rem;}
-    .section{margin: 50px;}
+    .section p{font-size: 1.3rem;}
+    .section h2{font-size: 1.8rem;}
+    .section{margin: 40px;}
     .ftr{padding: 15px;}
+    .absolute {
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width:460px) {
     .wrap-1 nav li { margin: 8px 9px;}
-    .col-3 { display: none;}
     .edit{margin: auto 1.3rem 1rem;}
     .edit h1 { font-size: 3rem;}
     .edit p { margin: 2rem 8rem 1.5rem auto;}
@@ -195,14 +228,14 @@ body{ font:16px/1.3 var(--ff);}
     .offer button{ margin-left: -30px; width: 77px; margin-top: 30px;}
     .offer form>input{ border: none; border-radius: 20px; padding: 10px; width: 45%;}  
     .footer{padding: 30px;}
-    .about{margin: 25px auto auto 60px;}
     .col-p-11{flex: none; flex-basis: 100%; max-width: 80%; text-align: center; justify-content: center;}
-    .absolute { position: absolute; top: 4px; left: 15px; font-size: 30px;}
+    .absolute { position: absolute; top: -12px; left: 25px; font-size: 20px;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
-    .about-5 img {margin: 0px auto 25px 85px; width: 100%; height: auto;}
+    .about-5 img {margin: 0px auto 25px 85px; width: 110%; height: auto;}
     .about-1{ margin: 50px 0;}
+    .about-4 img{width: 120%; height: auto; }
     .about-4 img {margin: auto auto auto 90px;}
-    .wrap-4 span{font-size: 3rem; font-weight: bold;}
+    .wrap-4 span{font-size: 2.3rem; font-weight: bold;}
 
 }
 
@@ -210,18 +243,26 @@ body{ font:16px/1.3 var(--ff);}
     .wrap-1 nav li { margin: 8px 14px;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
     .about-1{margin: 35px 0;}
-    .about-4 img {margin: -25px auto auto 85px;}
+    .about-4 img {margin-top: -25px;}
     .about-5 img {margin: 0px auto 25px 65px;}
+    .image img{ width: 185%; height: auto;}
     .logo-2{ padding: 40px;}
     .pedro h3{margin: 15px;} 
     .offer{padding: 30px;}
     .offer button{ margin-left: -30px; width: 77px; margin-top: 30px;}
     .offer form>input{ border: none; border-radius: 20px; padding: 10px; width: 45%;}  
     .footer{padding: 20px;}
-    .about{margin: 25px auto auto 60px;}
+    .col-m-12{ flex-basis: 100%; max-width: 100%;}
+    .about{margin: 25px auto 0 0;}
+    .absolute {
+        position: absolute;
+        top: -35px;
+        left: 15px;
+        font-size: 20px;
+        }
 }
 
-@media screen and (max-width:350px){
+/* @media screen and (max-width:350px){
     .wrap-1 nav li { margin: 10px 9px;}
     .wrap-2{ margin: -10px -44px;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
@@ -234,4 +275,4 @@ body{ font:16px/1.3 var(--ff);}
     .offer button{ margin-left: -30px; width: 77px; margin-top: 30px;}
     .offer form>input{ border: none; border-radius: 20px; padding: 10px; width: 35%;}  
     .footer{padding: 30px;}
-}
+} */
