@@ -7,37 +7,70 @@
     <meta name="description" content="Food-items">
     <title>Recipe app</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-   <div class="wrap-1">
+   <div class="wrap-1" id="home">
     <div>
         <nav>
-            <ul class="flex">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">MENU</a></li>
-                <li><a href="#">OFFERS</a></li>
-                <li><a href="#">CONTACT</a></li>
+            <ul class="flex sticky">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#Offers">OFFERS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </div>
-    <div class="banner">
+    <div class="banner" id="home">
         <div class="container">
             <div class="row">
                     <div class="col-6 col-p-12">
                         <div class="edit">
-                          <img class="logo"src="images/logo.webp"alt=""width="145px" height="152px"/>
+                          <img class="logo"src="images/logo.webp"alt=""width="145" height="152"/>
                           <h1>Mariachi</h1>
                           <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Suscipit doloribus quaerat ipsum, fugiat porro in adipisci
                             atque.
                           </p>
-                          <button>ORDER NOW</button>
+                          <button id="popup-btn">ORDER NOW</button>
+                          <div class="popup" id="popup">
+                            <h2>MENU TO ORDER</h2>
+                            <ol>
+                                <li><span>Hecho en Mexico - $4.99</span>
+                                    <ul>
+                                        <li>Glass bottled in Mexico with pure cane sugar</li>
+                                        <li>Coca-Cola, Sprite, Orange Fanta</li>
+                                    </ul>
+                                </li><br>
+                                <li>Nachos(GS)- $17.95
+                                    <ul>
+                                        <li>Crispy tortillas, queso, black beans, shredded cheese, tomato salsa, sour</li>
+                                        <li>Cream, guacamole</li>
+                                        <li>Choice of chicken tinga or beef machaca</li>
+                                    </ul>
+                                </li><br>
+                                <li>Mexican Cobb (GS)- $20.95
+                                    <ul>
+                                        <li>Roamine lettuce, grilled chicken, tomato, grilled corn, avocado, queso fresco, pickled onion, spicy ranch dressing</li>
+                                    </ul>
+                                </li><br>
+                                <li>Vegetarianas(GS, VG)- $18.95
+                                    <ul>
+                                        <li>roasted sweet potatoes, chayote, carrots, golden beets, roasted corn, jalapeño, onions, wild mushrooms, bell peppers, vegan cheese, ranchera sauce</li>
+                                    </ul>
+                                </li><br>
+                                <!-- <li>Hecho en Mexico - $4.99
+                                    <ul>
+                                        <li>Coca-Cola, Sprite, Orange Fanta</li>
+                                         <li>Glass bottled in Mexico with pure cane sugar</li>
+                                    </ul>
+                                </li> -->
+                            </ol>
+                            <button id="close-btn">Close</button>
+                        </div>
                         </div>
                       </div>
             </div>
@@ -45,7 +78,7 @@
         </div>
     </div>
 
-    <div class="wrap-2">
+    <div class="wrap-2" id="menu">
         <div class="full">
             <div class="container">
                 <div class="row">
@@ -54,7 +87,10 @@
                    <div class="section">
                     <h2>Don't Miss Our Menu!</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto cumque unde, inventore rerum ipsum praesentium.</p>
-                    <button class="btn">SEE MENU</button>
+                    <button class="btn" id="popup-menu">SEE MENU</button>
+                    <div class="overlay" id="overlay"></div>
+                    <div class="popup" id="popup">
+                    </div> 
                    </div>
                 </div>
                 <div class="col-1"></div>
@@ -66,7 +102,7 @@
         <img src="images/wrap-3.webp" alt="" width="100%" >
     </div>
 
-    <div class="wrap-4">
+    <div class="wrap-4" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -99,13 +135,13 @@
         </div>
     </div>
 
-    <div class="wrap-5">
+    <div class="wrap-5" id="Offers">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-t-6 about-1 col-p-12">
                     <h1>See Our Offers</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque eos maiores pariatur adipisci inventore facere.</p>
-                    <button>TELL ME MORE</button>
+                    <button>SEE OFFERS</button>
                 </div>
                 <div class="col-6 col-p">
                     <div class="about-5">
@@ -135,7 +171,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita fugiat quas, explicabo facilis iure blanditiis.</p>
 
                 <form action="#">
-                    <input type="email" placeholder="Your Email">
+                    <input type="email" placeholder="Your Email" class="mail">
                     <button>Subscribe</button>
                 </form>
             </div>
@@ -143,7 +179,7 @@
        </div>
     </div>
 
-        <div class="footer">
+        <div class="footer" id="contact">
             <div class="container">
                <div class="row">
                 <div class="col-5 col-t-6">
@@ -152,43 +188,45 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut saepe odio, tenetur cumque dolor expedita. Lorem ipsum dolor sit amet.</p>
                    </div>
                     <div class="icon">
-                        <span class="fa-brands fa-facebook"></span>
-                        <span class="fa-brands fa-square-instagram"></span>
-                        <span class="fa-brands fa-square-twitter"></span>
-                        <span class="fa-brands fa-square-whatsapp"></span>
+                        <a href=""><span class="fab fa-instagram"></span></a>
+                        <a href=""><span class="fab fa-facebook"></span></a>
+                        <a href=""><span class="fab fa-twitter"></span></a>
+                        <a href=""><span class="fab fa-whatsapp"></span></a>
                     </div>
                 </div>
                 <div class="col-2 col-t-6 ftr">
                    <h3>About</h3>
                    <ul>
-                    <li>History</li>
-                    <li>Our Team</li>
-                    <li>brand Guidlines</li>
-                    <li>Terms&Condition</li>
-                    <li>Privacy Policy</li>
+                    <li><a href="">History</a></li>
+                    <li><a href="">Our Team</a></li>
+                    <li><a href="">brand Guidlines</a></li>
+                    <li><a href="">Terms&Condition</a></li>
+                    <li><a href="">Privacy Policy</a></li>
                    </ul>
                 </div>
                 <div class="col-2 col-t-6 ftr">
                     <h3>Services</h3>
                    <ul>
-                    <li>How to Order</li>
-                    <li>Our Product</li>
-                    <li>Offers</li>
-                    <li>Promo</li>
-                    <li>Pyment Method</li>
+                    <li><a href="">How to Order</a></li>
+                    <li><a href="">Our Product</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Promo</a></li>
+                    <li><a href="">Pyment Method</a></li>
                    </ul>
+                   <a href="#home"><span class="fa-solid fa-arrow-up arrow" id="home"></span></a>
+
                 </div>
                 <div class="col-2 col-t-6 ftr">
-                    <h3>Services</h3>
+                    <h3><a href="">Other</a></h3>
                    <ul>
-                    <li>Contact Us</li>
-                    <li>Helpt</li>
+                    <li><a href="">Contact Us: +91 99123xxxxx</a></li>
+                    <li><a href="">Help</a></li>
                    </ul>
                 </div>
-               </div>
+               </div> 
             </div>
         </div>      
-
+<script src="script.js"></script>
 <script src="https://kit.fontawesome.com/4aa5804266.js" crossorigin="anonymous"></script>
 </body>
 </html>
