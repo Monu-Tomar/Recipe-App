@@ -3,11 +3,13 @@ const popupBtn = document.getElementById('popup-btn');
 const popup = document.getElementById('popup');
 const closeBtn = document.getElementById('close-btn');
 const overlay = document.getElementById('overlay');
+// const main = document.querySelector(".main");
 
 
 popupBtn.addEventListener('click', () => {
     popup.style.display = 'block';
     overlay.style.display = 'block';
+    // main.style.display = "none"; 
 
 });
 closeBtn.addEventListener('click', () => {
@@ -21,10 +23,13 @@ overlay.addEventListener('click', () => {
     overlay.style.display = 'none';
 });
 
+
+
 const popupMenu = document.getElementById('popup-menu');
 popupMenu.addEventListener('click', () => {
     popup.style.display = 'block';
     overlay.style.display = 'block';
+    
 });
 
 var disableBodyScroll = function(){
